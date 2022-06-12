@@ -1,0 +1,64 @@
+{
+  // 使用 IntelliSense 了解相关属性。 
+  // 悬停以查看现有属性的描述。
+  // 欲了解更多信息，请访问: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "lldb",
+      "request": "launch",
+      "name": "Debug unit tests in library 'extendible-hash'",
+      "cargo": {
+        "args": [
+          "test",
+          "--no-run",
+          "--lib",
+          "--package=extendible-hash"
+        ],
+        "filter": {
+          "name": "extendible-hash",
+          "kind": "lib"
+        }
+      },
+      "args": [],
+      "cwd": "${workspaceFolder}"
+    },
+    {
+      "type": "lldb",
+      "request": "launch",
+      "name": "Debug executable 'extendible-hash'",
+      "cargo": {
+        "args": [
+          "build",
+          "--bin=extendible-hash",
+          "--package=extendible-hash"
+        ],
+        "filter": {
+          "name": "extendible-hash",
+          "kind": "bin"
+        }
+      },
+      "args": [],
+      "cwd": "${workspaceFolder}"
+    },
+    {
+      "type": "lldb",
+      "request": "launch",
+      "name": "Debug unit tests in executable 'extendible-hash'",
+      "cargo": {
+        "args": [
+          "test",
+          "--no-run",
+          "--bin=extendible-hash",
+          "--package=extendible-hash"
+        ],
+        "filter": {
+          "name": "extendible-hash",
+          "kind": "bin"
+        }
+      },
+      "args": [],
+      "cwd": "${workspaceFolder}"
+    }
+  ]
+}
